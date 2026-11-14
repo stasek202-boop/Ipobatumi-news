@@ -1,0 +1,72 @@
+{
+  "updated": "2026-11-14",
+  "nbg_rate": "8,25%",
+  "items": [
+    {
+      "datetime": "2026-10-21",
+      "date": {
+        "ru": "21 октября 2026",
+        "ka": "21 ოქტომბერი 2026",
+        "en": "21 October 2026"
+      },
+      "title": {
+        "ru": "Нацбанк Грузии сохранил ставку 8,25%",
+        "ka": "ეროვნულმა ბანკმა განაკვეთი 8,25%-ზე შეინარჩუნა",
+        "en": "National Bank of Georgia holds its rate at 8.25%"
+      },
+      "text": {
+        "ru": "Ставка рефинансирования держится на уровне 8,25% с мая. Прогноз инфляции на 2026 год повышен до 5,4%, поэтому снижения ставок по кредитам в лари в ближайшие месяцы ждать не стоит. Следующее заседание — 16 декабря.",
+        "ka": "რეფინანსირების განაკვეთი მაისიდან 8,25%-ია. 2026 წლის ინფლაციის პროგნოზი 5,4%-მდე გაიზარდა, ამიტომ ლარის სესხებზე განაკვეთების შემცირება უახლოეს თვეებში მოსალოდნელი არ არის. შემდეგი სხდომა 16 დეკემბერს გაიმართება.",
+        "en": "The refinancing rate has stayed at 8.25% since May. The 2026 inflation forecast was raised to 5.4%, so lari loan rates are unlikely to fall in the coming months. The next meeting is on 16 December."
+      },
+      "source": {
+        "name": "Trading Economics",
+        "url": "https://tradingeconomics.com/georgia/interest-rate/news/593770"
+      }
+    },
+    {
+      "datetime": "2026-06",
+      "date": {
+        "ru": "II квартал 2026",
+        "ka": "2026 წლის II კვარტალი",
+        "en": "Q2 2026"
+      },
+      "title": {
+        "ru": "Квартиры в новостройках Батуми подорожали почти на 10%",
+        "ka": "ბათუმში ახალაშენებული ბინები თითქმის 10%-ით გაძვირდა",
+        "en": "New-build apartments in Batumi up almost 10%"
+      },
+      "text": {
+        "ru": "Средняя цена готовой квартиры на первичном рынке в июне — около $1 960 за м², на 9,8% выше, чем год назад. За квартал в Батуми продано 4 168 квартир, на вторичном рынке сделок стало больше на 13,4%.",
+        "ka": "ივნისში პირველად ბაზარზე მზა ბინის საშუალო ფასი 1 მ²-ზე დაახლოებით $1 960 იყო, რაც 9,8%-ით მეტია, ვიდრე ერთი წლის წინ. კვარტალში ბათუმში 4 168 ბინა გაიყიდა, მეორად ბაზარზე გარიგებები 13,4%-ით გაიზარდა.",
+        "en": "The average price of a finished new-build apartment was about $1,960 per m² in June, 9.8% higher than a year earlier. Batumi saw 4,168 apartment sales in the quarter, and resale deals rose 13.4%."
+      },
+      "source": {
+        "name": "Metropolitan",
+        "url": "https://metropolitan.realestate/media/news/georgia-tbilisi-batumi-real-estate-2026/"
+      }
+    },
+    {
+      "datetime": "2026-03-01",
+      "date": {
+        "ru": "С 1 марта 2026",
+        "ka": "2026 წლის 1 მარტიდან",
+        "en": "From 1 March 2026"
+      },
+      "title": {
+        "ru": "ВНЖ за покупку жилья — теперь от $150 000",
+        "ka": "ბინადრობის ნებართვა უძრავი ქონებით — ახლა $150 000-დან",
+        "en": "Residence permit through property now from $150,000"
+      },
+      "text": {
+        "ru": "Минимальная стоимость недвижимости для годового ВНЖ в Грузии выросла со $100 000 до $150 000. Если собственность зарегистрирована до 1 марта, действует старый порог.",
+        "ka": "ერთწლიანი ბინადრობის ნებართვისთვის უძრავი ქონების მინიმალური ღირებულება $100 000-დან $150 000-მდე გაიზარდა. 1 მარტამდე რეგისტრირებულ ქონებაზე ძველი ზღვარი ვრცელდება.",
+        "en": "The minimum property value for a one-year Georgian residence permit rose from $100,000 to $150,000. Property registered before 1 March still qualifies under the old threshold."
+      },
+      "source": {
+        "name": "EIG Law",
+        "url": "https://eiglaw.com/georgia-to-increase-real-estate-investment-threshold-for-residence-permits-effective-march-1-2026/"
+      }
+    }
+  ]
+}
