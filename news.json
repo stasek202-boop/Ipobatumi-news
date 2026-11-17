@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-17",
   "nbg_rate": "8,25%",
   "items": [
     {
@@ -25,47 +25,47 @@
       }
     },
     {
-      "datetime": "2026-06",
+      "datetime": "2026-09",
       "date": {
-        "ru": "II квартал 2026",
-        "ka": "2026 წლის II კვარტალი",
-        "en": "Q2 2026"
+        "ru": "Сентябрь 2026",
+        "ka": "სექტემბერი 2026",
+        "en": "September 2026"
       },
       "title": {
-        "ru": "Квартиры в новостройках Батуми подорожали почти на 10%",
-        "ka": "ბათუმში ახალაშენებული ბინები თითქმის 10%-ით გაძვირდა",
-        "en": "New-build apartments in Batumi up almost 10%"
+        "ru": "Батуми: продаж меньше, а цены растут",
+        "ka": "ბათუმი: გაყიდვები შემცირდა, ფასები კი იზრდება",
+        "en": "Batumi: fewer sales, but prices keep rising"
       },
       "text": {
-        "ru": "Средняя цена готовой квартиры на первичном рынке в июне — около $1 960 за м², на 9,8% выше, чем год назад. За квартал в Батуми продано 4 168 квартир, на вторичном рынке сделок стало больше на 13,4%.",
-        "ka": "ივნისში პირველად ბაზარზე მზა ბინის საშუალო ფასი 1 მ²-ზე დაახლოებით $1 960 იყო, რაც 9,8%-ით მეტია, ვიდრე ერთი წლის წინ. კვარტალში ბათუმში 4 168 ბინა გაიყიდა, მეორად ბაზარზე გარიგებები 13,4%-ით გაიზარდა.",
-        "en": "The average price of a finished new-build apartment was about $1,960 per m² in June, 9.8% higher than a year earlier. Batumi saw 4,168 apartment sales in the quarter, and resale deals rose 13.4%."
+        "ru": "В сентябре в Батуми продано 1 614 квартир — на 10,4% меньше, чем год назад, но общий объём сделок вырос до $107 млн (+0,9%). Средняя цена в новых домах — $1 408 за м², на 5,2% выше прошлогодней. Спрос немного остыл, а цены продолжают расти, так что ждать скидок перед покупкой вряд ли стоит.",
+        "ka": "სექტემბერში ბათუმში 1 614 ბინა გაიყიდა — 10,4%-ით ნაკლები, ვიდრე ერთი წლის წინ, თუმცა გარიგებების ჯამური მოცულობა $107 მილიონამდე გაიზარდა (+0,9%). ახალ კორპუსებში საშუალო ფასი 1 მ²-ზე $1 408-ია, რაც გასული წლის მაჩვენებელზე 5,2%-ით მეტია. მოთხოვნა ოდნავ შენელდა, ფასები კი კვლავ იზრდება, ამიტომ ყიდვამდე ფასდაკლების ლოდინს დიდი აზრი არ აქვს.",
+        "en": "Batumi recorded 1,614 apartment sales in September, 10.4% fewer than a year earlier, while total deal value edged up to $107 million (+0.9%). The average price in newer buildings reached $1,408 per m², 5.2% above last year. Demand has cooled slightly but prices are still climbing, so waiting for discounts before buying is unlikely to pay off."
       },
       "source": {
-        "name": "Metropolitan",
-        "url": "https://metropolitan.realestate/media/news/georgia-tbilisi-batumi-real-estate-2026/"
+        "name": "Colliers Georgia (International Investment)",
+        "url": "https://internationalinvestment.biz/en/real-estate/8970-georgias-property-market-apartment-sales-rise-in-tbilisi-fall-in-batumi.html"
       }
     },
     {
-      "datetime": "2026-03-01",
+      "datetime": "2026-07",
       "date": {
-        "ru": "С 1 марта 2026",
-        "ka": "2026 წლის 1 მარტიდან",
-        "en": "From 1 March 2026"
+        "ru": "Январь–июль 2026",
+        "ka": "2026 წლის იანვარი–ივლისი",
+        "en": "January–July 2026"
       },
       "title": {
-        "ru": "ВНЖ за покупку жилья — теперь от $150 000",
-        "ka": "ბინადრობის ნებართვა უძრავი ქონებით — ახლა $150 000-დან",
-        "en": "Residence permit through property now from $150,000"
+        "ru": "Ипотека в Грузии выросла почти в полтора раза",
+        "ka": "იპოთეკური სესხების გაცემა თითქმის ერთნახევარჯერ გაიზარდა",
+        "en": "Mortgage lending in Georgia up nearly 50%"
       },
       "text": {
-        "ru": "Минимальная стоимость недвижимости для годового ВНЖ в Грузии выросла со $100 000 до $150 000. Если собственность зарегистрирована до 1 марта, действует старый порог.",
-        "ka": "ერთწლიანი ბინადრობის ნებართვისთვის უძრავი ქონების მინიმალური ღირებულება $100 000-დან $150 000-მდე გაიზარდა. 1 მარტამდე რეგისტრირებულ ქონებაზე ძველი ზღვარი ვრცელდება.",
-        "en": "The minimum property value for a one-year Georgian residence permit rose from $100,000 to $150,000. Property registered before 1 March still qualifies under the old threshold."
+        "ru": "За январь–июль 2026 года банки выдали 34 482 ипотечных кредита на 3,58 млрд лари — на 46,5% больше, чем годом ранее; средний кредит — около 103 900 лари. Новые кредиты в лари в июле стоили в среднем 11,4%, в валюте — 7,7%, и ставки немного снизились. Валютный кредит дешевле, но если доход в лари, курсовой риск ложится на заёмщика — это стоит учесть при выборе.",
+        "ka": "2026 წლის იანვარ–ივლისში ბანკებმა 34 482 იპოთეკური სესხი 3,58 მლრდ ლარის ოდენობით გასცეს — 46,5%-ით მეტი, ვიდრე ერთი წლით ადრე; საშუალო სესხი დაახლოებით 103 900 ლარია. ივლისში ახალი ლარის სესხების საშუალო განაკვეთი 11,4% იყო, უცხოურ ვალუტაში — 7,7%, და განაკვეთები ოდნავ შემცირდა. ვალუტის სესხი იაფია, მაგრამ თუ შემოსავალი ლარშია, საკურსო რისკი მსესხებელზე მოდის — არჩევისას ეს გაითვალისწინეთ.",
+        "en": "In January–July 2026, banks issued 34,482 mortgages worth GEL 3.58 billion, 46.5% more than a year earlier; the average loan was about GEL 103,900. In July, new lari loans averaged 11.4% and foreign-currency loans 7.7%, both slightly lower. Foreign-currency loans are cheaper, but if your income is in lari you carry the exchange-rate risk, so factor that in when choosing."
       },
       "source": {
-        "name": "EIG Law",
-        "url": "https://eiglaw.com/georgia-to-increase-real-estate-investment-threshold-for-residence-permits-effective-march-1-2026/"
+        "name": "НБГ (International Investment)",
+        "url": "https://internationalinvestment.biz/real-estate/8782-obem-ipoteki-v-gruzii-uvelichilsja-pochti-v-poltora-raza.html"
       }
     }
   ]
