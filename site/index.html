@@ -399,6 +399,77 @@ section[id]{scroll-margin-top:90px}
 #contact #lead .field textarea{font-size:18px;padding:16px 18px;min-height:150px}
 #contact #lead .check{font-size:15px}
 #contact #lead button[type=submit]{align-self:stretch!important;min-height:60px;font-size:16px}
+
+/* ===== Mobile layout (phones only, ≤640px) — desktop untouched ===== */
+@media (max-width:640px){
+  body{font-size:15px;line-height:1.55}
+  section{padding-block:44px;overflow-x:clip}
+  html,body{overflow-x:clip}
+  h2{font-size:28px!important;line-height:1.12}
+  .eyebrow{font-size:11px}
+  .wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+
+  /* header: one compact row of controls, menu scrolls sideways */
+  .top .wrap{gap:8px 12px;padding-block:10px}
+  .logo-svg{height:36px}
+  nav.menu{font-size:12px;gap:16px}
+
+  /* hero */
+  .hero{gap:28px}
+  .hero h1{font-size:32px!important}
+  .hero p{font-size:16px}
+  .hero .ctas{gap:10px}
+  .hero .ctas .btn{flex:1 1 100%}
+  .stats{gap:12px 28px}
+  .stats b{font-size:36px}
+  .portrait-img{max-width:300px;max-height:380px;margin-inline:auto}
+  .btn{min-height:46px;padding:12px 20px;font-size:13px}
+
+  /* forms & calculator: calmer inputs */
+  .field input,.field select,.field textarea{font-size:17px}
+  .calc-in,.calc-out{padding:20px}
+  .big{font-size:42px}
+
+  /* ---- swipe carousels instead of long stacks of cards ---- */
+  .progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards,.listings{
+    display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    gap:12px!important;columns:auto!important;background:transparent!important;border:0!important;
+    margin-inline:-18px;padding:4px 18px 14px;scroll-padding-inline:18px;scrollbar-width:none}
+  .progs::-webkit-scrollbar,.adv::-webkit-scrollbar,ol.steps::-webkit-scrollbar,#news .cards::-webkit-scrollbar,#articles .cards::-webkit-scrollbar,#reviews .cards::-webkit-scrollbar,.listings::-webkit-scrollbar{display:none}
+  .progs>*,.adv>*,ol.steps>*,#news .cards>*,#articles .cards>*,#reviews .cards>*,.listings>*{
+    flex:0 0 84%!important;max-width:84%;scroll-snap-align:start;margin:0!important;break-inside:auto}
+  .progs>[hidden]{display:none!important}
+  .listings>*{flex-basis:90%!important;max-width:90%}
+
+  /* compact cards */
+  .prog{padding:20px 18px 18px;gap:8px}
+  .prog h3,.adv h3,.steps h3,.card h3,.art-card h3{font-size:21px}
+  .ill-card,.art-card,.card{padding:20px}
+  .illu{height:120px!important;aspect-ratio:auto!important;max-height:none}
+  .ill-card>.illu,.art-card>.illu{width:calc(100% + 40px)!important;margin:-20px -20px 4px!important}
+  .card p,.art-card p,.adv p,.steps p{font-size:14px}
+  .rev .quote,#reviews .quote{font-size:17px}
+  .rows .row{padding:16px 0}
+
+  /* property listings */
+  .lmain{aspect-ratio:4/3;max-height:300px}
+  .lgal{padding:10px}
+
+  /* swipe hint under each carousel */
+  .swipe-hint{display:flex;align-items:center;gap:8px;margin:2px 0 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .swipe-hint::after{content:"→";color:var(--gold)}
+
+  #who{padding-inline:18px}
+  .illu-tall{height:170px!important;max-height:170px}
+
+  /* contact */
+  #contact .c-photo{min-height:220px;max-height:300px}
+}
+@media (min-width:641px){.swipe-hint{display:none}}
+.swipe-hint::before{content:"Листайте"}
+html:lang(ka) .swipe-hint::before{content:"გადაფურცლეთ"}
+html:lang(en) .swipe-hint::before{content:"Swipe"}
 </style>
 
 </head><body>
@@ -1141,4 +1212,9 @@ setLang(T[saved]?saved:'ru');
 
 </script>
 
+<script>
+// mobile: swipe hint under each carousel
+document.querySelectorAll('.progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards,.listings').forEach(el=>{const p=document.createElement('p'); p.className='swipe-hint'; p.setAttribute('aria-hidden','true'); el.after(p);});
+if(matchMedia('(max-width:640px)').matches) document.querySelectorAll('.illu').forEach(s=>s.setAttribute('preserveAspectRatio','xMidYMid slice'));
+</script>
 </body></html>
