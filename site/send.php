@@ -5,7 +5,7 @@ header('Content-Type: application/json; charset=utf-8');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); echo '{"ok":false}'; exit; }
 
 $cfg = require __DIR__ . '/tg-config.php';
-$d = json_decode(file_get_contents('php://input'), true);
+$d = !empty($_POST) ? $_POST : json_decode(file_get_contents('php://input'), true);
 if (!is_array($d)) { http_response_code(400); echo '{"ok":false}'; exit; }
 
 // Защита от ботов: скрытое поле должно быть пустым
@@ -17,6 +17,8 @@ $phone = clean($d['phone'] ?? '', 40);
 $msgr  = clean($d['messenger'] ?? '', 40);
 $q     = clean($d['question'] ?? '', 1500);
 $lang  = clean($d['lang'] ?? '', 5);
+$calc  = clean($d['calc'] ?? '', 400);
+$src   = ($d['source'] ?? '') === 'calculator' ? 'калькулятор' : 'форма консультации';
 
 if ($name === '' || !preg_match('/\d{5,}/', preg_replace('/\D/', '', $phone))) {
   http_response_code(422); echo '{"ok":false}'; exit;
@@ -29,11 +31,12 @@ if (is_file($lock) && time() - filemtime($lock) < 30) { http_response_code(429);
 @touch($lock);
 
 $e = fn($s) => htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
-$text = "🏠 <b>Новая заявка с ipobatumi.ru</b>\n\n"
+$text = "🏠 <b>Новая заявка с ipobatumi.ru</b> (" . $src . ")\n\n"
       . "<b>Имя:</b> " . $e($name) . "\n"
       . "<b>Телефон:</b> " . $e($phone) . "\n"
       . "<b>Куда написать:</b> " . $e($msgr) . "\n"
       . ($q !== '' ? "<b>Вопрос:</b> " . $e($q) . "\n" : '')
+      . ($calc !== '' ? "<b>Расчёт:</b> " . $e($calc) . "\n" : '')
       . "<b>Язык сайта:</b> " . $e(strtoupper($lang)) . "\n"
       . "<i>" . date('d.m.Y H:i') . " (Тбилиси)</i>";
 
