@@ -410,9 +410,12 @@ section[id]{scroll-margin-top:90px}
   .wrap{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
 
   /* header: one compact row of controls, menu scrolls sideways */
-  .top .wrap{gap:8px 12px;padding-block:10px}
-  .logo-svg{height:36px}
-  nav.menu{font-size:12px;gap:16px}
+  .top .wrap{flex-wrap:nowrap;gap:8px;padding-block:8px}
+  .logo-svg{height:30px}
+  nav.menu,.theme-btn{display:none!important}
+  .top-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .hdr-phone{min-height:38px;width:38px;padding:0;justify-content:center}
+  .langs button{min-width:34px;padding:8px 8px;font-size:11px}
 
   /* hero */
   .hero{gap:28px}
@@ -431,37 +434,45 @@ section[id]{scroll-margin-top:90px}
   .big{font-size:42px}
 
   /* ---- swipe carousels instead of long stacks of cards ---- */
-  .progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards,.listings{
+  
+.progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards{
     display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
-    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;touch-action:pan-x pan-y;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
     gap:12px!important;columns:auto!important;background:transparent!important;border:0!important;
     margin-inline:-18px;padding:4px 18px 14px;scroll-padding-inline:18px;scrollbar-width:none}
-  .progs::-webkit-scrollbar,.adv::-webkit-scrollbar,ol.steps::-webkit-scrollbar,#news .cards::-webkit-scrollbar,#articles .cards::-webkit-scrollbar,#reviews .cards::-webkit-scrollbar,.listings::-webkit-scrollbar{display:none}
-  .progs>*,.adv>*,ol.steps>*,#news .cards>*,#articles .cards>*,#reviews .cards>*,.listings>*{
+  .progs::-webkit-scrollbar,.adv::-webkit-scrollbar,ol.steps::-webkit-scrollbar,#news .cards::-webkit-scrollbar,#articles .cards::-webkit-scrollbar,#reviews .cards::-webkit-scrollbar{display:none}
+  .progs>*,.adv>*,ol.steps>*,#news .cards>*,#articles .cards>*,#reviews .cards>*{
     flex:0 0 84%!important;max-width:84%;scroll-snap-align:start;margin:0!important;break-inside:auto}
   .progs>[hidden]{display:none!important}
-  .listings>*{flex-basis:90%!important;max-width:90%}
 
   /* compact cards */
   .prog{padding:20px 18px 18px;gap:8px}
   .prog h3,.adv h3,.steps h3,.card h3,.art-card h3{font-size:21px}
   .ill-card,.art-card,.card{padding:20px}
+  .ill-card,.art-card.ill-card{padding:0 20px 20px!important}
   .illu{height:120px!important;aspect-ratio:auto!important;max-height:none}
-  .ill-card>.illu,.art-card>.illu{width:calc(100% + 40px)!important;margin:-20px -20px 4px!important}
+  .ill-card>.illu,.art-card>.illu{width:calc(100% + 40px)!important;margin:0 -20px 4px!important}
   .card p,.art-card p,.adv p,.steps p{font-size:14px}
   .rev .quote,#reviews .quote{font-size:17px}
-  .rows .row{padding:16px 0}
+  .rows .row{padding:14px 16px;gap:6px}
+  .row dt{font-size:16px}
+  .row dd{font-size:14px}
 
   /* property listings */
-  .lmain{aspect-ratio:4/3;max-height:300px}
-  .lgal{padding:10px}
+  .listings{gap:18px;margin-top:24px}
+  .listing{border-radius:22px}
+  .lmain{aspect-ratio:4/3;max-height:280px;border-radius:16px}
+  .lgal{padding:10px;gap:8px}
+  .linfo{padding:16px 18px 20px;gap:12px}
+  .linfo h3{font-size:24px}
 
   /* swipe hint under each carousel */
   .swipe-hint{display:flex;align-items:center;gap:8px;margin:2px 0 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
   .swipe-hint::after{content:"→";color:var(--gold)}
 
-  #who{padding-inline:18px}
-  .illu-tall{height:170px!important;max-height:170px}
+  .cond-illu{flex-basis:100%;max-width:none}
+  .cond-illu svg{min-height:0!important;height:160px!important}
+  .news-card > *:not(.news-img){margin-left:18px;margin-right:18px}
 
   /* contact */
   #contact .c-photo{min-height:220px;max-height:300px}
@@ -748,7 +759,7 @@ html:lang(en) .swipe-hint::before{content:"Swipe"}
 </section>
 
 <section id="who">
-  <div class="wrap"></div>
+  <div class="wrap">
     <div class="eyebrow" data-i18n="who_eyebrow">Для кого</div>
     <h2 data-i18n="who_h2">Кому я помогаю</h2>
     <div class="adv">
@@ -1214,7 +1225,7 @@ setLang(T[saved]?saved:'ru');
 
 <script>
 // mobile: swipe hint under each carousel
-document.querySelectorAll('.progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards,.listings').forEach(el=>{const p=document.createElement('p'); p.className='swipe-hint'; p.setAttribute('aria-hidden','true'); el.after(p);});
+document.querySelectorAll('.progs,.adv,ol.steps,#news .cards,#articles .cards,#reviews .cards').forEach(el=>{const p=document.createElement('p'); p.className='swipe-hint'; p.setAttribute('aria-hidden','true'); el.after(p);});
 if(matchMedia('(max-width:640px)').matches) document.querySelectorAll('.illu').forEach(s=>s.setAttribute('preserveAspectRatio','xMidYMid slice'));
 </script>
 </body></html>
