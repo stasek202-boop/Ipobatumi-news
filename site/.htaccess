@@ -2,8 +2,8 @@ DirectoryIndex index.html
 Options -Indexes
 
 RewriteEngine On
-# HTTPS и без www
-RewriteCond %{HTTPS} off [OR]
+# HTTPS и без www (SSL принимает nginx, Apache видит X-Forwarded-Proto)
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://ipobatumi.ru%{REQUEST_URI} [R=301,L]
 
